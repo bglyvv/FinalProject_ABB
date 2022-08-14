@@ -1,0 +1,6 @@
+/Users/kanan/Desktop/FinalProject_ABB/Backend/Project.UnitTests/bin/Debug/net6.0/CoverletSourceRootsMapping
+/Users/kanan/Desktop/FinalProject_ABB/Backend/Project.UnitTests/obj/Debug/net6.0/Project.UnitTests.csproj.AssemblyReference.cache
+/Users/kanan/Desktop/FinalProject_ABB/Backend/Project.UnitTests/obj/Debug/net6.0/Project.UnitTests.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kanan/Desktop/FinalProject_ABB/Backend/Project.UnitTests/obj/Debug/net6.0/Project.UnitTests.AssemblyInfoInputs.cache
+/Users/kanan/Desktop/FinalProject_ABB/Backend/Project.UnitTests/obj/Debug/net6.0/Project.UnitTests.AssemblyInfo.cs
+/Users/kanan/Desktop/FinalProject_ABB/Backend/Project.UnitTests/obj/Debug/net6.0/Project.UnitTests.csproj.CoreCompileInputs.cache

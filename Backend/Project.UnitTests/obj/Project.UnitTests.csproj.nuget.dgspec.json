@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\FinalProject_ABB\\Backend\\Project.UnitTests\\Project.UnitTests.csproj": {}
+    "/Users/kanan/Desktop/FinalProject_ABB/Backend/Project.UnitTests/Project.UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\FinalProject_ABB\\Backend\\Project.Api\\Project.Api.csproj": {
+    "/Users/kanan/Desktop/FinalProject_ABB/Backend/Project.Api/Project.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\FinalProject_ABB\\Backend\\Project.Api\\Project.Api.csproj",
+        "projectUniqueName": "/Users/kanan/Desktop/FinalProject_ABB/Backend/Project.Api/Project.Api.csproj",
         "projectName": "Project.Api",
-        "projectPath": "C:\\Users\\User\\Desktop\\FinalProject_ABB\\Backend\\Project.Api\\Project.Api.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\FinalProject_ABB\\Backend\\Project.Api\\obj\\",
+        "projectPath": "/Users/kanan/Desktop/FinalProject_ABB/Backend/Project.Api/Project.Api.csproj",
+        "packagesPath": "/Users/kanan/.nuget/packages/",
+        "outputPath": "/Users/kanan/Desktop/FinalProject_ABB/Backend/Project.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/kanan/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -81,29 +79,10 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.28, 3.1.28]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -112,36 +91,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\FinalProject_ABB\\Backend\\Project.UnitTests\\Project.UnitTests.csproj": {
+    "/Users/kanan/Desktop/FinalProject_ABB/Backend/Project.UnitTests/Project.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\FinalProject_ABB\\Backend\\Project.UnitTests\\Project.UnitTests.csproj",
+        "projectUniqueName": "/Users/kanan/Desktop/FinalProject_ABB/Backend/Project.UnitTests/Project.UnitTests.csproj",
         "projectName": "Project.UnitTests",
-        "projectPath": "C:\\Users\\User\\Desktop\\FinalProject_ABB\\Backend\\Project.UnitTests\\Project.UnitTests.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\FinalProject_ABB\\Backend\\Project.UnitTests\\obj\\",
+        "projectPath": "/Users/kanan/Desktop/FinalProject_ABB/Backend/Project.UnitTests/Project.UnitTests.csproj",
+        "packagesPath": "/Users/kanan/.nuget/packages/",
+        "outputPath": "/Users/kanan/Desktop/FinalProject_ABB/Backend/Project.UnitTests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/kanan/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\FinalProject_ABB\\Backend\\Project.Api\\Project.Api.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\FinalProject_ABB\\Backend\\Project.Api\\Project.Api.csproj"
+              "/Users/kanan/Desktop/FinalProject_ABB/Backend/Project.Api/Project.Api.csproj": {
+                "projectPath": "/Users/kanan/Desktop/FinalProject_ABB/Backend/Project.Api/Project.Api.csproj"
               }
             }
           }
@@ -191,8 +168,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -201,7 +177,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
         }
       }
     }

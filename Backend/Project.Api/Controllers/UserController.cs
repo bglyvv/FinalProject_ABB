@@ -19,12 +19,10 @@ namespace Project.Api.Controllers
     public class UserController : ControllerBase
     {
         private readonly AppDbContext _ctx;
-        private readonly IConfiguration _config;
 
-        public UserController(AppDbContext ctx, IConfiguration config)
+        public UserController(AppDbContext ctx)
         {
             _ctx = ctx;
-            _config = config;
         }
 
         [HttpGet]
@@ -205,15 +203,6 @@ namespace Project.Api.Controllers
                 });
             }
             //return Ok(await _ctx.Users.ToListAsync());
-        }
-
-        [HttpGet]
-        [Route("connection")]
-        public IActionResult GetConnection(int id)
-        {
-            return Ok(_config.GetConnectionString("Default"));
-
-
         }
 
 
