@@ -13,7 +13,7 @@ COPY . .
 ARG DOMAIN
 
 
-RUN REACT_APP_API_URL=${DOMAIN} npm run build
+RUN REACT_APP_API_URL=${FINALBACKEND_SERVICE_HOST}:${FINALBACKEND_SERVICE_PORT} npm run build
 
 # -----------------------------------------------------------------------------
 # SERVING IMAGE

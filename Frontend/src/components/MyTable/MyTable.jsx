@@ -12,9 +12,9 @@ import { Circles } from "react-loader-spinner";
 import os from "os-browserify";
 
 function MyTable() {
-  const getUrl ="http://"+process.env.REACT_APP_API_URL + "/user/list"
-  const editUrl ="http://"+ process.env.REACT_APP_API_URL + "/user/edit/"
-  const removeUrl ="http://"+ process.env.REACT_APP_API_URL + "/user/delete/"
+  const getUrl ="/user/list"
+  const editUrl ="/user/edit/"
+  const removeUrl ="/user/delete/"
   const [users, setUsers] = useState([]);
   const [mainLoading, setMainLoading] = useState(false);
   const [url, setUrl] = useState()

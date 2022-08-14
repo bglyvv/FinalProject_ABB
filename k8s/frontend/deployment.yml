@@ -12,8 +12,6 @@ spec:
       containers:
       - name: finalfrontend
         image: bglyvv/final-frontend:latest
-        ports:
-        - containerPort: 81
         env:
           - name: REACT_APP_API_URL
             value: http://${FINALBACKEND_SERVICE_HOST}:${FINALBACKEND_SERVICE_PORT}

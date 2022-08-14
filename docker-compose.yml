@@ -8,15 +8,15 @@ services:
       context: frontend
       dockerfile: Dockerfile
     environment: 
-      - backendUrl=http://final-backend
+      - REACT_APP_API_URL=http://final-backend
     ports:
-      - "81:80"
+      - "81:3000"
     depends_on: 
       - backend
   backend:
     image: final-backend
     build: 
-      context: backend
+      context: backend/FinalProject
       dockerfile: Dockerfile
     ports: 
       - "80:80"
