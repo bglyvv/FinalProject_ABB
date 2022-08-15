@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kanan/Desktop/FinalProject_ABB/Backend/FinalProject/FinalProject.csproj": {}
+    "C:\\Users\\User\\Desktop\\Backend\\FinalProject\\FinalProject.csproj": {}
   },
   "projects": {
-    "/Users/kanan/Desktop/FinalProject_ABB/Backend/FinalProject/FinalProject.csproj": {
+    "C:\\Users\\User\\Desktop\\Backend\\FinalProject\\FinalProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kanan/Desktop/FinalProject_ABB/Backend/FinalProject/FinalProject.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Backend\\FinalProject\\FinalProject.csproj",
         "projectName": "FinalProject",
-        "projectPath": "/Users/kanan/Desktop/FinalProject_ABB/Backend/FinalProject/FinalProject.csproj",
-        "packagesPath": "/Users/kanan/.nuget/packages/",
-        "outputPath": "/Users/kanan/Desktop/FinalProject_ABB/Backend/FinalProject/obj/",
+        "projectPath": "C:\\Users\\User\\Desktop\\Backend\\FinalProject\\FinalProject.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Backend\\FinalProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/kanan/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -96,6 +98,18 @@
               "target": "Package",
               "version": "[4.8.3, )"
             },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "coverlet.msbuild": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.4.2, )"
@@ -107,7 +121,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -119,7 +134,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

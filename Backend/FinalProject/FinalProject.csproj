@@ -4,9 +4,18 @@
 		<TargetFramework>netcoreapp3.1</TargetFramework>
 		<StartupObject>FinalProject.Program</StartupObject>
 		<StartupObject>FinalProject.Program</StartupObject>
+    <SonarQubeTestProject>false</SonarQubeTestProject>
 	</PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="3.1.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.msbuild" Version="3.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.26" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />

@@ -56,7 +56,7 @@ namespace FinalProject.UnitTests
 
             using (var context = new AppDbContext(options))
             {
-             
+
                 var controller = new UserController(context);
 
 
@@ -100,7 +100,7 @@ namespace FinalProject.UnitTests
 
                 var result = await controller.Add(newUser) as ObjectResult;
 
-                Assert.That(result.StatusCode, Is.EqualTo(404) );
+                Assert.That(result.StatusCode, Is.EqualTo(404));
             }
         }
 
@@ -143,9 +143,50 @@ namespace FinalProject.UnitTests
                 var controller = new UserController(context);
 
 
-                var result = await controller.Edit(10,newUser) as ObjectResult;
+                var result = await controller.Edit(10, newUser) as ObjectResult;
 
                 Assert.That(result.StatusCode, Is.EqualTo(404));
+            }
+        }
+
+        [Test]
+        public async Task EditUser_WithoutData_ReturnsError()
+        {
+            var options = new DbContextOptionsBuilder<AppDbContext>().UseInMemoryDatabase(databaseName: "PhoneApp").Options;
+
+            using (var context = new AppDbContext(options))
+            {
+                User newUser = null;
+
+
+                var controller = new UserController(context);
+
+
+                var result = await controller.Edit(3, newUser) as ObjectResult;
+
+                Assert.That(result.StatusCode, Is.EqualTo(404));
+            }
+        }
+
+        [Test]
+        public async Task EditUser_WithName_ReturnsOK()
+        {
+            var options = new DbContextOptionsBuilder<AppDbContext>().UseInMemoryDatabase(databaseName: "PhoneApp").Options;
+
+            using (var context = new AppDbContext(options))
+            {
+                User newUser = new User
+                {
+                    Name="Vadym H"
+                };
+
+
+                var controller = new UserController(context);
+
+
+                var result = await controller.Edit(3, newUser) as ObjectResult;
+
+                Assert.That(result.StatusCode, Is.EqualTo(200));
             }
         }
 

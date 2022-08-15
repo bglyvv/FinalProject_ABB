@@ -91,7 +91,6 @@ namespace FinalProject.Controllers
                 }
                 await _ctx.Users.AddAsync(user);
                 await _ctx.SaveChangesAsync();
-                //return ValidationProblem(ModelState);
 
                 return Ok(new UserOperationDTO
                 {
@@ -202,7 +201,6 @@ namespace FinalProject.Controllers
                     operation_type = "edit"
                 });
             }
-            //return Ok(await _ctx.Users.ToListAsync());
         }
 
 
