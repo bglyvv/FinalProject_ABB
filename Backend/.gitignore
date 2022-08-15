@@ -1,2 +1,4 @@
-**/bin/*
-**/obj/*
+FinalProject/bin
+FinalProject/obj
+FinalProject.UnitTests/bin
+FinalProject.UnitTests/obj
