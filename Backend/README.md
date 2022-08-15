@@ -1,6 +1,6 @@
 # Table of Contents
 
-1. [Step Project](#step-project---phonebook-web-application)
+1. [Final Project](#final-project---phonebook-web-application)
 2. [Tech Stack](#tech-stack)
    <!-- 1. [User service](#user-service)
         1. [User model](#user-model)
@@ -27,10 +27,10 @@
     2. [Create](#create)
     3. [Status](#status-1)
 
-# Step Project - Phonebook web-application
+# Final Project - Phonebook web-application
 
 
-It is the source code of my step project at ABB - Software Engineering 2 course.
+It is the source code of my final project at ABB - Software Engineering 2 course.
 
 The main goal of this project was to create Back-End which returns user list, delete and edit specific user, and also returns status of application and status of connection to database.
 

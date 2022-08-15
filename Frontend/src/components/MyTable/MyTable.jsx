@@ -12,15 +12,16 @@ import { Circles } from "react-loader-spinner";
 import os from "os-browserify";
 
 function MyTable() {
-  const getUrl ="/user/list"
-  const editUrl ="/user/edit/"
-  const removeUrl ="/user/delete/"
+  const getUrl =os.hostname()+"user/list"
+  const editUrl =os.hostname()+"user/edit/"
+  const removeUrl =os.hostname()+"user/delete/"
   const [users, setUsers] = useState([]);
   const [mainLoading, setMainLoading] = useState(false);
   const [url, setUrl] = useState()
   const getUsers = useCallback(async () => {
-    console.log(process.env)
+    console.log(os.hostname())
     console.log(getUrl)
+    
     await axios.get(getUrl).then((response) => {
       console.log(response);
       var arr = [];

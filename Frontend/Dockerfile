@@ -1,29 +1,20 @@
-# production
-FROM node:14-alpine as build-stage
+# pull official base image
+FROM node:13.12.0-alpine
 
+# set working directory
 WORKDIR /app
 
-# Install dependencies
-COPY package*.json ./
-RUN npm install
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
 
-# Build
-COPY . .
+# install app dependencies
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install --silent
+RUN npm install react-scripts@3.4.1 -g --silent
 
-ARG DOMAIN
+# add app
+COPY . ./
 
-
-RUN REACT_APP_API_URL=${FINALBACKEND_SERVICE_HOST}:${FINALBACKEND_SERVICE_PORT} npm run build
-
-# -----------------------------------------------------------------------------
-# SERVING IMAGE
-FROM fitiavana07/nginx-react
-
-# Copy built files
-COPY --from=build-stage /app/build /usr/share/nginx/html
-
-# 80 for HTTP
-EXPOSE 80
-
-# Run nginx
-CMD nginx -g 'daemon off;'
+# start app
+CMD ["npm", "start"]
