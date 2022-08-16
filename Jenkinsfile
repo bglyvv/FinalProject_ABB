@@ -24,27 +24,22 @@ pipeline {
                 sh 'echo $dockerhub_PSW | docker login -u $dockerhub_USR --password-stdin'
             }
         }
-        stage('Build Backend image'){
+        stage('Build Docker Compose file'){
             steps{
-                dir('Backend'){
-                    dir('FinalProject'){
-                        sh 'docker build -t backend .'
-                    }
-                }
+                sh 'docker-compose build'
             }
         }
-        stage('Build Frontend image'){
+        stage('Tag Docker images'){
             steps{
-                dir('Frontend'){
-                    sh 'docker build -t frontend .'
-                }
+                sh 'docker tag final-backend bglyvv/final-backend'
+                sh 'docker tag final-frontend bglyvv/final-frontend'
             }
         }
         stage('Push Backend image'){
             steps{
                 dir('Backend'){
                     dir('FinalProject'){
-                        sh 'docker push bglyvv/final-backend'
+                        sh 'docker push bglyvv/final-backend:latest'
                     }
                 }
             }
@@ -52,7 +47,7 @@ pipeline {
         stage('Push Frontend image'){
             steps{
                 dir('Frontend'){
-                    sh 'docker push bglyvv/final-frontend'
+                    sh 'docker push bglyvv/final-frontend:latest'
                 }
             }
         }

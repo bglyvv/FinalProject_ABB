@@ -27,7 +27,7 @@
     2. [Create](#create)
     3. [Status](#status-1)
 
-# Step Project - Phonebook web-application
+# Final Project - Phonebook web-application
 
 
 It is the source code of my step project at ABB - Software Engineering 2 course.
@@ -46,185 +46,15 @@ In this project I have used following technologies:
 
 **Database:** MySql
 
-# Back-End
-
-## API Reference
-
-### Get all users
-
-```bash
-  GET /user/list
-```
-### Add user
-
-```bash
-  POST /user/add
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `name and phone`      | `string` | **Required** |
-
-### Delete user
-
-```bash
-  DELETE /user/delete/{id}
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `Id`      | `Int` | **Required** |
-
-### Edit user
-
-```bash
-  PATCH /user/edit/{id}
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `Id, name or phone`      | `Int, string` | **Id - Required** |
-
-### Get specific user
-
-```bash
-  GET /user/{id}
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `Id`      | `Int` | **Required** |
-
-### Get status
-
-```bash
-  GET /status
-```
-<hr>
-
-## ScreenShoots
-
-### Get All users
+# Unit test
+In order to carry out unit test I have wrote 11 test. As you can see all of these tests passed succesfully.
 <p align="center">
-  <img src="screenshots/user_list.png" style="width:300px"/>
+  <img src="screenshots/unittest.png" style="width:300px"/>
 </p>
 
-### Add user
+# Sonarqube
+I have download Sonarqube server to my local machine. Then after following the steps I got following result:
 <p align="center">
-  <img src="screenshots/user_add.png" style="width:300px"/>
+  <img src="screenshots/sonarqube.png" style="width:300px"/>
 </p>
-
-### Result-success
-<p align="center">
-  <img src="screenshots/user_add_success.png" style="width:300px"/>
-</p>
-
-Now let's not add one field of the user
-<p align="center">
-  <img src="screenshots/user_add_partial.png" style="width:300px"/>
-</p>
-
-### Result-fail
-<p align="center">
-  <img src="screenshots/user_add_fail.png" style="width:300px"/>
-</p>
-
-### Delete user
-<p align="center">
-  <img src="screenshots/user_delete.png" style="width:300px"/>
-</p>
-
-### Result-success
-<p align="center">
-  <img src="screenshots/user_delete_success.png" style="width:300px"/>
-</p>
-
-Now let's delete user that doesn't exist
-<p align="center">
-  <img src="screenshots/user_delete_partial.png" style="width:300px"/>
-</p>
-
-### Result-fail
-<p align="center">
-  <img src="screenshots/user_delete_fail.png" style="width:300px"/>
-</p>
-
-### Edit user
-From this part I will use postman application
-<p align="center">
-  <img src="screenshots/user_edit.png" style="width:300px"/>
-</p>
-
-### Result-success
-<p align="center">
-  <img src="screenshots/user_edit_success.png" style="width:300px"/>
-</p>
-
-### Result-fail
-<p align="center">
-  <img src="screenshots/user_edit_fail.png" style="width:300px"/>
-</p>
-
-### Get Specific user
-<p align="center">
-  <img src="screenshots/user_get_specific.png" style="width:300px"/>
-</p>
-If we try to get user that doesn't exist we will get following result:
-
-<p align="center">
-  <img src="screenshots/user_get_specific_fail.png" style="width:300px"/>
-</p>
-
-
-### Status
-<p align="center">
-  <img src="screenshots/back_status.png" style="width:300px"/>
-</p>
-
-# Front-End
-
-## Table
-
-The table view of my application is following:
-
-<p align="center">
-  <img src="screenshots/front_table.png" style="width:500px"/>
-</p>
-
-When I want to edit user I need to click Yellow pen icon, and for deleting clicking red button is enough
-
-<p align="center">
-  <img src="screenshots/front_edit.png" style="width:500px"/>
-</p>
-
-After editting and clicking green check icon we will get following result:
-
-<p align="center">
-  <img src="screenshots/front_edit_success.png" style="width:500px"/>
-</p>
-
-After deleting user we get following result
-
-<p align="center">
-  <img src="screenshots/front_delete_success.png" style="width:500px"/>
-</p>
-
-## Create
-In order to create new user I need to fill the input forms
-
-<p align="center">
-  <img src="screenshots/front_add.png" style="width:500px"/>
-</p>
-
-<p align="center">
-  <img src="screenshots/front_add_success.png" style="width:500px"/>
-</p>
-
-## Status
-The status page of my application is following:
-
-<p align="center">
-  <img src="screenshots/front_status.png" style="width:300px"/>
-</p>
-
 
