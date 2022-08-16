@@ -81,10 +81,5 @@ pipeline {
                 }
             }
         }
-        stage('Run Frontend'){
-            steps{
-                sh 'minikube service finalfrontend'
-            }
-        }
     }
 }
