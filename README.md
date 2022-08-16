@@ -69,7 +69,7 @@ My Minikube dashboard:
 </p>
 
 # Jenkins
-I have create Jenkinsfile in order to automate process.  
+I have created Jenkinsfile in order to automate process.  
 My Jenkins pipeline output is like following:
 <p align="center">
   <img src="screenshots/jenkinsfile.png" style="width:500px"/>
