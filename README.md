@@ -49,12 +49,12 @@ In this project I have used following technologies:
 # Unit test
 In order to carry out unit test I have wrote 11 test. As you can see all of these tests passed succesfully.
 <p align="center">
-  <img src="screenshots/unittest.png" style="width:300px"/>
+  <img src="screenshots/unittest.PNG" style="width:300px"/>
 </p>
 
 # Sonarqube
 I have download Sonarqube server to my local machine. Then after following the steps I got following result:
 <p align="center">
-  <img src="screenshots/sonarqube.png" style="width:300px"/>
+  <img src="screenshots/sonarqube.PNG" style="width:300px"/>
 </p>
 
