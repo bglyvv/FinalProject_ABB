@@ -38,9 +38,7 @@
 
   <ItemGroup>
     <SonarQubeSetting Include="sonar.coverage.exclusions">
-        <Value>./Migrations/*.cs</Value>
-        <Value>./Program.cs</Value>
-        <Value>./Startup.cs</Value>
+        <Value>./Migrations/*.cs, ./Startup.cs, ./Program.cs, ./Controllers/SqlConnectionHealthCheck.cs</Value>
     </SonarQubeSetting>
  </ItemGroup>
 
