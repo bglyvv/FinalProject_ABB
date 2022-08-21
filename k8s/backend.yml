@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: finalbackend
-        image: bglyvv/final-backend:latest
+        image: bglyvv/final-backend
         ports:
         - containerPort: 80
         env:
@@ -20,3 +20,15 @@ spec:
   selector:
     matchLabels:
       app: finalbackend
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: finalbackend
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: finalbackend

@@ -19,6 +19,27 @@ pipeline {
                 
             }
         }
+        stage('Sonar Coverage'){
+            steps{
+                dir('Backend'){
+                    
+                    dir('FinalProject'){
+                        withSonarQubeEnv('SonarQube'){
+                            sh 'dotnet sonarscanner begin /k:"jenkins" /d:sonar.host.url="http://localhost:9000" /d:sonar.coverageReportPaths="./sonarqubecoverage/SonarQube.xml"'
+                            sh 'dotnet build'
+                            sh 'dotnet test "../FinalProject.UnitTests/FinalProject.UnitTests.csproj" --no-build --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover'
+                            sh 'reportgenerator "-reports:../FinalProject.UnitTests/TestResults/*/coverage.opencover.xml" "-targetdir:./sonarqubecoverage" "-reporttypes:SonarQube"'
+                            sh 'dotnet sonarscanner end'
+                        }
+                    }
+                }
+            }
+        }
+        stage('Quality check'){
+            steps{
+                waitForQualityGate abortPipeline: true
+            }
+        }
         stage('Login to DockerHub') {
             steps {
                 sh 'echo $dockerhub_PSW | docker login -u $dockerhub_USR --password-stdin'
@@ -39,7 +60,7 @@ pipeline {
             steps{
                 dir('Backend'){
                     dir('FinalProject'){
-                        sh 'docker push bglyvv/final-backend:latest'
+                        sh 'docker push bglyvv/final-backend'
                     }
                 }
             }
@@ -47,7 +68,7 @@ pipeline {
         stage('Push Frontend image'){
             steps{
                 dir('Frontend'){
-                    sh 'docker push bglyvv/final-frontend:latest'
+                    sh 'docker push bglyvv/final-frontend'
                 }
             }
         }
@@ -56,23 +77,11 @@ pipeline {
                 sh 'minikube start'
             }
         }
-        stage('Update k8s for Backend'){
+        stage('Update k8s for both Backend and Frontend'){
             steps{
                 dir('k8s'){
-                    dir('backend'){
-                        sh 'kubectl apply -f deployment.yml'
-                        sh 'kubectl apply -f service.yml'
-                    }
-                }
-            }
-        }
-        stage('Update k8s for Frontend'){
-            steps{
-                dir('k8s'){
-                    dir('frontend'){
-                        sh 'kubectl apply -f deployment.yml'
-                        sh 'kubectl apply -f service.yml'
-                    }
+                    sh 'kubectl apply -f backend.yml'
+                    sh 'kubectl apply -f frontend.yml'
                 }
             }
         }

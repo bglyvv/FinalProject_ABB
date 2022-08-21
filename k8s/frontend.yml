@@ -11,10 +11,24 @@ spec:
     spec:
       containers:
       - name: finalfrontend
-        image: bglyvv/final-frontend:latest
+        image: bglyvv/final-frontend
         env:
           - name: REACT_APP_API_URL
             value: http://${FINALBACKEND_SERVICE_HOST}:${FINALBACKEND_SERVICE_PORT}
   selector:
     matchLabels:
       app: finalfrontend
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: finalfrontend
+spec:
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 81
+    targetPort: 81
+  selector:
+    app: finalfrontend
