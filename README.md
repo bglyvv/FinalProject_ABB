@@ -74,3 +74,8 @@ My Jenkins pipeline output is like following:
 <p align="center">
   <img src="screenshots/jenkinsfile.png" style="width:500px"/>
 </p>
+
+My Sonarqube quality gate:
+<p align="center">
+  <img src="screenshots/qualitygates.png" style="width:500px"/>
+</p>
