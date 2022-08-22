@@ -50,12 +50,6 @@ pipeline {
                 sh 'docker-compose build'
             }
         }
-        stage('Tag Docker images'){
-            steps{
-                sh 'docker tag final-backend bglyvv/final-backend'
-                sh 'docker tag final-frontend bglyvv/final-frontend'
-            }
-        }
         stage('Push Backend image'){
             steps{
                 dir('Backend'){
@@ -80,6 +74,7 @@ pipeline {
         stage('Update k8s for both Backend and Frontend'){
             steps{
                 dir('k8s'){
+                    sh 'kubectl apply -f namespace.yml'
                     sh 'kubectl apply -f backend.yml'
                     sh 'kubectl apply -f frontend.yml'
                 }
