@@ -50,6 +50,11 @@ Kubectl services:
   <img src="screenshots/kubectl_services.png" style="width:500px"/>
 </p>
 
+Kubectl namespaces:
+<p align="center">
+  <img src="screenshots/kubectl_namespace.png" style="width:500px"/>
+</p>
+
 Now let's get minikube cluster ip for frontend
 <br/>
 <p align="center">
